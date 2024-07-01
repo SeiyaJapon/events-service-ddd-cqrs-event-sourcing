@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1895b317-c777-434a-8125-0a856b8ded4f" name="Changes" comment="" />
+    <list default="true" id="1895b317-c777-434a-8125-0a856b8ded4f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/AuthContext/Domain/User/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AuthContext/Domain/User/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/AuthContext/Infrastructure/CreateUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AuthContext/Infrastructure/User/Http/RegisterUserController.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +17,9 @@
   <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpDebugGeneral" ignore_connections_through_unregistered_servers="false">
     <xdebug_debug_ports port="9003" />
@@ -169,6 +176,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "credentialsType com.jetbrains.php.remote.interpreter.ui.PhpCreateRemoteSdkForm": "Docker",
     "credentialsType com.jetbrains.php.remote.interpreter.ui.PhpInplaceEditRemoteSdkForm": "Docker",
+    "git-widget-placeholder": "master",
     "last_opened_file_path": "/Users/seiya/Sites/freshSky/auth-service/app/AuthContext/Domain/ValueObjects",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -270,11 +278,24 @@
       <workItem from="1719570424345" duration="53000" />
       <workItem from="1719601044406" duration="49539000" />
       <workItem from="1719827729569" duration="59000" />
-      <workItem from="1719850334513" duration="1143000" />
+      <workItem from="1719850334513" duration="4773000" />
     </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1719851855152</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1719851855152</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
   </component>
 </project>

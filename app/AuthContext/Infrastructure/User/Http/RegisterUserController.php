@@ -2,13 +2,16 @@
 
 declare(strict_types=1);
 
-namespace App\AuthContext\Infrastructure;
+namespace App\AuthContext\Infrastructure\User\Http;
 
+use App\AuthContext\Infrastructure\Hash;
+use App\AuthContext\Infrastructure\Str;
+use App\AuthContext\Infrastructure\User;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use League\Tactician\CommandBus;
 
-class CreateUserController
+class RegisterUserController
 {
     private CommandBus $commandBus;
 
