@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace App\AuthContext\Application\User\Command\RegisterUserCommand;
 
-class RegisterUserCommand
+use App\AuthContext\Application\Command\CommandInterface;
+
+class RegisterUserCommand implements CommandInterface
 {
     private string $name;
     private string $email;

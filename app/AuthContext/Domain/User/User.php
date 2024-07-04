@@ -83,4 +83,16 @@ class User
     {
         $this->rememberToken = $rememberToken;
     }
+
+    public function toArray()
+    {
+        return [
+            'id' => $this->id->value(),
+            'name' => $this->name,
+            'email' => $this->email,
+            'email_verified_at' => $this->emailVerifiedAt,
+            'password' => $this->password,
+            'remember_token' => $this->rememberToken
+        ];
+    }
 }

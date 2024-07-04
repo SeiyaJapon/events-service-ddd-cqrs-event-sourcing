@@ -4,10 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1895b317-c777-434a-8125-0a856b8ded4f" name="Changes" comment="">
+    <list default="true" id="1895b317-c777-434a-8125-0a856b8ded4f" name="Changes" comment="creating CQRS">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php-docker-settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php-docker-settings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/AuthContext/Domain/User/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AuthContext/Domain/User/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/AuthContext/Infrastructure/CreateUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AuthContext/Infrastructure/User/Http/RegisterUserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/AuthContext/Application/User/Command/RegisterUserCommand/RegisterUserCommandHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AuthContext/Application/User/Command/RegisterUserCommand/RegisterUserCommandHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/AuthContext/Application/User/Query/FindUserByEmailAndPassword/FindUserByEmailQueryHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AuthContext/Application/User/Query/FindUserByEmailAndPassword/FindUserByEmailQueryHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/AuthContext/Application/User/Query/GeneratePasswordGrantClientAccessTokenQuery/GeneratePasswordGrantClientAccessTokenQueryHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AuthContext/Application/User/Query/GeneratePasswordGrantClientAccessTokenQuery/GeneratePasswordGrantClientAccessTokenQueryHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/AuthContext/Application/User/Query/GeneratePasswordGrantClientAccessTokenQuery/GeneratePasswordGrantClientAccessTokenQueryResponse.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AuthContext/Application/User/Query/GeneratePasswordGrantClientAccessTokenQuery/GeneratePasswordGrantClientAccessTokenQueryResponse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/AuthContext/Application/User/Service/RegisterUserService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AuthContext/Application/User/Service/RegisterUserService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/AuthContext/Domain/AggregateRoot.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AuthContext/Domain/AggregateRoot.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/AuthContext/Infrastructure/User/Http/RegisterUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AuthContext/Infrastructure/User/Http/RegisterUserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/AuthContext/Infrastructure/User/Persistence/Repository/EloquentUserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AuthContext/Infrastructure/User/Persistence/Repository/EloquentUserRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_06_30_135003_create_oauth_personal_access_clients_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_06_30_135004_create_oauth_auth_codes_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_06_30_135005_create_oauth_access_tokens_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_06_30_135006_create_oauth_clients_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2024_06_30_135007_create_oauth_refresh_tokens_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/nginx/default.conf" beforeDir="false" afterPath="$PROJECT_DIR$/docker/nginx/default.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/php/xdebug.ini" beforeDir="false" afterPath="$PROJECT_DIR$/docker/php/xdebug.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +128,6 @@
       <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
       <path value="$PROJECT_DIR$/vendor/defuse/php-encryption" />
-      <path value="$PROJECT_DIR$/vendor/league/tactician" />
       <path value="$PROJECT_DIR$/vendor/symfony/mime" />
       <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
       <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
@@ -161,6 +183,7 @@
       <path value="$PROJECT_DIR$/vendor/league/event" />
       <path value="$PROJECT_DIR$/vendor/league/uri" />
       <path value="$PROJECT_DIR$/vendor/laravel/passport" />
+      <path value="$PROJECT_DIR$/vendor/league/tactician" />
     </include_path>
   </component>
   <component name="ProjectColorInfo">{
@@ -174,17 +197,17 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "credentialsType com.jetbrains.php.remote.interpreter.ui.PhpCreateRemoteSdkForm": "Docker",
+    "credentialsType com.jetbrains.php.remote.interpreter.ui.PhpCreateRemoteSdkForm": "Docker Compose",
     "credentialsType com.jetbrains.php.remote.interpreter.ui.PhpInplaceEditRemoteSdkForm": "Docker",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/Users/seiya/Sites/freshSky/auth-service/app/AuthContext/Domain/ValueObjects",
+    "git-widget-placeholder": "register__user",
+    "last_opened_file_path": "/Users/seiya/Sites/freshSky/auth-service/app/AuthContext/Domain",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "php.override.implement.member.chooser.php.doc": "NONE",
-    "settings.editor.selected.configurable": "reference.webide.settings.project.settings.php.debug",
+    "settings.editor.selected.configurable": "reference.webide.settings.project.settings.php",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -196,10 +219,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/AuthContext/Domain" />
+      <recent name="$PROJECT_DIR$/app/AuthContext/Infrastructure/QueryBus" />
+      <recent name="$PROJECT_DIR$/app/AuthContext/Infrastructure/CommandBus" />
+      <recent name="$PROJECT_DIR$/app/AuthContext/Infrastructure" />
       <recent name="$PROJECT_DIR$/app/AuthContext/Domain/ValueObjects" />
-      <recent name="$PROJECT_DIR$/docker" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/docker/php" />
     </key>
   </component>
   <component name="RunManager">
@@ -251,8 +275,11 @@
         <option value="php-symfony_mime-37cbfb0ca1b6-f06c5301" />
         <option value="php-symfony_process-37cbfb0ca1b6-0c45b194" />
         <option value="php-symfony_process-37cbfb0ca1b6-3c743ae3" />
+        <option value="php-symfony_property_access-37cbfb0ca1b6-10c893ff" />
+        <option value="php-symfony_property_info-37cbfb0ca1b6-dd1584a5" />
         <option value="php-symfony_routing-37cbfb0ca1b6-2eb007bc" />
         <option value="php-symfony_routing-37cbfb0ca1b6-85de77df" />
+        <option value="php-symfony_serializer-37cbfb0ca1b6-d56cfc98" />
         <option value="php-symfony_string-37cbfb0ca1b6-6da9c235" />
         <option value="php-symfony_translation-37cbfb0ca1b6-3c853d79" />
         <option value="php-symfony_translation-37cbfb0ca1b6-f19b930d" />
@@ -278,7 +305,10 @@
       <workItem from="1719570424345" duration="53000" />
       <workItem from="1719601044406" duration="49539000" />
       <workItem from="1719827729569" duration="59000" />
-      <workItem from="1719850334513" duration="4773000" />
+      <workItem from="1719850334513" duration="9073000" />
+      <workItem from="1720032729183" duration="3172000" />
+      <workItem from="1720111627843" duration="6546000" />
+      <workItem from="1720119512093" duration="11438000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -288,7 +318,47 @@
       <option name="project" value="LOCAL" />
       <updated>1719851855152</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Register User: VO, entities, commands, queries, repositories, controller">
+      <option name="closed" value="true" />
+      <created>1719855409623</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1719855409623</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Register User: VO, entities, commands, queries, repositories, controller">
+      <option name="closed" value="true" />
+      <created>1719855428015</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1719855428015</updated>
+    </task>
+    <task id="LOCAL-00004" summary="creating CQRS">
+      <option name="closed" value="true" />
+      <created>1720114290428</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1720114290428</updated>
+    </task>
+    <task id="LOCAL-00005" summary="creating CQRS">
+      <option name="closed" value="true" />
+      <created>1720119006818</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1720119006818</updated>
+    </task>
+    <task id="LOCAL-00006" summary="creating CQRS">
+      <option name="closed" value="true" />
+      <created>1720119606680</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1720119606680</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,6 +366,34 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="Register User: VO, entities, commands, queries, repositories, controller" />
+    <MESSAGE value="creating CQRS" />
+    <option name="LAST_COMMIT_MESSAGE" value="creating CQRS" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/AuthContext/Application/User/Service/RegisterUserService.php</url>
+          <line>34</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/AuthContext/Infrastructure/User/Http/RegisterUserController.php</url>
+          <line>22</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/AuthContext/Application/User/Query/GeneratePasswordGrantClientAccessTokenQuery/GeneratePasswordGrantClientAccessTokenQueryHandler.php</url>
+          <line>20</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/AuthContext/Application/User/Service/RegisterUserService.php</url>
+          <line>29</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

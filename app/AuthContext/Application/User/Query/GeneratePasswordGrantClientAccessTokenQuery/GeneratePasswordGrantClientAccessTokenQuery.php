@@ -2,9 +2,11 @@
 
 declare(strict_types=1);
 
-namespace App\AuthContext\Application\User\Command\GeneratePasswordGrantClientAccessTokenCommand;
+namespace App\AuthContext\Application\User\Query\GeneratePasswordGrantClientAccessTokenQuery;
 
-class GeneratePasswordGrantClientAccessTokenCommand
+use App\AuthContext\Application\Query\QueryInterface;
+
+class GeneratePasswordGrantClientAccessTokenQuery implements QueryInterface
 {
     private string $userId;
 
