@@ -6,11 +6,12 @@
         <entry key="8fbcfa58-3c92-4b5e-af86-02e36759b49b">
           <value>
             <DockerContainerSettings>
+              <option name="runCliOptions" value="" />
               <option name="version" value="1" />
               <option name="volumeBindings">
                 <list>
                   <DockerVolumeBindingImpl>
-                    <option name="containerPath" value="/opt/project" />
+                    <option name="containerPath" value="/var/www" />
                     <option name="hostPath" value="$PROJECT_DIR$" />
                   </DockerVolumeBindingImpl>
                 </list>
