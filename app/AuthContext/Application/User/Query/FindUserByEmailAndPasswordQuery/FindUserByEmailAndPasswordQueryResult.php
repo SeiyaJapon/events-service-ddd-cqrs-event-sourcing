@@ -2,11 +2,11 @@
 
 declare (strict_types=1);
 
-namespace App\AuthContext\Application\User\Query\FindUserByEmailAndPassword;
+namespace App\AuthContext\Application\User\Query\FindUserByEmailAndPasswordQuery;
 
 use App\AuthContext\Application\Query\QueryResultInterface;
 
-class FindUserByEmailQueryResult implements QueryResultInterface
+class FindUserByEmailAndPasswordQueryResult implements QueryResultInterface
 {
     private array $user;
 
