@@ -15,7 +15,7 @@ class EloquentUserRepository implements UserRepositoryInterface
 {
     public function findByID(UserId $id): User
     {
-        $userEloquent = UserEloquent::find($id->value());
+        $userEloquent = $this->getById($id->value());
 
         if ($userEloquent === null) {
             throw UserNotFoundException::withId($id);
@@ -33,7 +33,7 @@ class EloquentUserRepository implements UserRepositoryInterface
 
     public function findByEmail(string $email): ?User
     {
-        $userEloquent = UserEloquent::where('email', $email)->first();
+        $userEloquent = $this->getUserEloquentByEmail($email);
 
         if ($userEloquent === null) {
             return null;
@@ -51,9 +51,9 @@ class EloquentUserRepository implements UserRepositoryInterface
 
     public function findByEmailAndPassword(string $email, string $password): ?User
     {
-        $userEloquent = UserEloquent::where('email', $email)->first();
+        $userEloquent = $this->getUserEloquentByEmail($email);
 
-        if ($userEloquent === null || !Hash::check($password, $userEloquent->password)) {
+        if ($this->assertUsereloquentIsNotNullAndPasswordIsCorrect($userEloquent, $password)) {
             return null;
         }
 
@@ -70,9 +70,24 @@ class EloquentUserRepository implements UserRepositoryInterface
     public function createToken(UserId $id, ?string $name): string
     {
         $name = $name ?? uniqid('token_', true);
-        $user = UserEloquent::find($id->value());
+        $user = $this->getById($id->value());
         $tokenResult = $user->createToken($name);
+
         return $tokenResult->accessToken;
+    }
+
+    public function update(string $id, string $name, string $email, string $password): void
+    {
+        $userEloquent = $this->getById($id);
+
+        $userEloquent->name = $name;
+        $userEloquent->email = $email;
+
+        if ($password !== null) {
+            $userEloquent->password = Hash::make($password);
+        }
+
+        $userEloquent->save();
     }
 
     public function save(User $user): void
@@ -85,5 +100,20 @@ class EloquentUserRepository implements UserRepositoryInterface
         ]);
 
         $newUser->save();
+    }
+
+    private function getUserEloquentByEmail(string $email): ?UserEloquent
+    {
+        return UserEloquent::where('email', $email)->first();
+    }
+
+    private function assertUsereloquentIsNotNullAndPasswordIsCorrect(?UserEloquent $userEloquent, string $password)
+    {
+        return $userEloquent === null || !Hash::check($password, $userEloquent->password);
+    }
+
+    private function getById(string $id)
+    {
+        return UserEloquent::find($id);
     }
 }
