@@ -4,6 +4,9 @@ return [
     'commands' => [
         App\AuthContext\Application\User\Command\RegisterUserCommand\RegisterUserCommand::class =>
             App\AuthContext\Application\User\Command\RegisterUserCommand\RegisterUserCommandHandler::class,
+        App\AuthContext\Application\User\Command\UpdateUserCommand\UpdateUserCommand::class =>
+            App\AuthContext\Application\User\Command\UpdateUserCommand\UpdateUserCommandHandler::class,
+
     ],
     'queries' => [
         App\AuthContext\Application\User\Query\GeneratePasswordGrantClientAccessTokenQuery\GeneratePasswordGrantClientAccessTokenQuery::class =>
@@ -12,5 +15,7 @@ return [
             \App\AuthContext\Application\User\Query\FindUserByEmailAndPasswordQuery\FindUserByEmailAndPasswordQueryHandler::class,
         \App\AuthContext\Application\User\Query\GetClientPasswordQuery\GetClientPasswordQuery::class =>
             \App\AuthContext\Application\User\Query\GetClientPasswordQuery\GetClientPasswordQueryHandler::class,
+        \App\AuthContext\Application\User\Query\FindUserByIdQuery\FindByIdQuery::class =>
+            \App\AuthContext\Application\User\Query\FindUserByIdQuery\FindByIdQueryHandler::class,
     ],
 ];
