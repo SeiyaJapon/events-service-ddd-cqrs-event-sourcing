@@ -8,7 +8,9 @@ return [
     'queries' => [
         App\AuthContext\Application\User\Query\GeneratePasswordGrantClientAccessTokenQuery\GeneratePasswordGrantClientAccessTokenQuery::class =>
             App\AuthContext\Application\User\Query\GeneratePasswordGrantClientAccessTokenQuery\GeneratePasswordGrantClientAccessTokenQueryHandler::class,
-        \App\AuthContext\Application\User\Query\FindUserByEmailAndPassword\FindUserByEmailQuery::class =>
-            \App\AuthContext\Application\User\Query\FindUserByEmailAndPassword\FindUserByEmailQueryHandler::class,
+        \App\AuthContext\Application\User\Query\FindUserByEmailAndPasswordQuery\FindUserByEmailAndPasswordQuery::class =>
+            \App\AuthContext\Application\User\Query\FindUserByEmailAndPasswordQuery\FindUserByEmailAndPasswordQueryHandler::class,
+        \App\AuthContext\Application\User\Query\GetClientPasswordQuery\GetClientPasswordQuery::class =>
+            \App\AuthContext\Application\User\Query\GetClientPasswordQuery\GetClientPasswordQueryHandler::class,
     ],
 ];

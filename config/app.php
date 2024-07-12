@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    'url' => env('APP_URL', 'http://freshsky-web'),
 
     /*
     |--------------------------------------------------------------------------
@@ -158,6 +158,7 @@ return [
          * Application Service Providers...
          */
         App\Providers\AppServiceProvider::class,
+        App\Providers\AuthServiceProvider::class,
 
         /*
          * Your custom service provider

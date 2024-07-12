@@ -5,11 +5,11 @@ declare(strict_types=1);
 namespace App\AuthContext\Infrastructure\User\Persistence\Repository;
 
 use App\AuthContext\Domain\User\Exception\UserNotFoundException;
-use App\AuthContext\Domain\User\Exception\UserTokenNotFoundException;
 use App\AuthContext\Domain\User\User;
 use App\AuthContext\Domain\User\UserId;
 use App\AuthContext\Domain\User\UserRepositoryInterface;
 use App\Models\User as UserEloquent;
+use Illuminate\Support\Facades\Hash;
 
 class EloquentUserRepository implements UserRepositoryInterface
 {
@@ -36,6 +36,24 @@ class EloquentUserRepository implements UserRepositoryInterface
         $userEloquent = UserEloquent::where('email', $email)->first();
 
         if ($userEloquent === null) {
+            return null;
+        }
+
+        return new User(
+            new UserId($userEloquent->id),
+            $userEloquent->name,
+            $userEloquent->email,
+            $userEloquent->email_verified_at,
+            $userEloquent->password,
+            $userEloquent->remember_token
+        );
+    }
+
+    public function findByEmailAndPassword(string $email, string $password): ?User
+    {
+        $userEloquent = UserEloquent::where('email', $email)->first();
+
+        if ($userEloquent === null || !Hash::check($password, $userEloquent->password)) {
             return null;
         }
 

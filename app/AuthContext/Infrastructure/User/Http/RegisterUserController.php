@@ -4,32 +4,40 @@ declare(strict_types=1);
 
 namespace App\AuthContext\Infrastructure\User\Http;
 
-use App\AuthContext\Application\User\Service\RegisterUserService;
+use App\AuthContext\Application\User\Command\RegisterUserCommand\RegisterUserCommand;
+use App\AuthContext\Application\User\Query\FindUserByEmailAndPasswordQuery\FindUserByEmailAndPasswordQuery;
+use App\AuthContext\Infrastructure\CommandBus\CommandBusInterface;
+use App\AuthContext\Infrastructure\QueryBus\QueryBusInterface;
 use App\AuthContext\Infrastructure\User;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 class RegisterUserController
 {
-    private RegisterUserService $registerUserService;
 
-    public function __construct(RegisterUserService $registerUserService)
+    private CommandBusInterface $commandBus;
+    private QueryBusInterface $queryBus;
+
+    public function __construct(CommandBusInterface $commandBus, QueryBusInterface $queryBus)
     {
-        $this->registerUserService = $registerUserService;
+        $this->commandBus = $commandBus;
+        $this->queryBus = $queryBus;
     }
 
     public function register(Request $request): JsonResponse
     {
-        $token = $this->registerUserService->execute(
-            $request->input('name'),
-            $request->input('email'),
-            bcrypt($request->input('password'))
+        $this->commandBus->handle(
+            new RegisterUserCommand(
+                $request->name,
+                $request->email,
+                $request->password
+            )
         );
 
-        return response()->json([
-            'token' => $token,
-            'name' => $request->input('name'),
-            'email' => $request->input('email')
-        ], 201);
+        $user = $this->queryBus->ask(
+            new FindUserByEmailAndPasswordQuery($request->email, $request->password)
+        );
+
+        return response()->json($user->result(), 201);
     }
 }

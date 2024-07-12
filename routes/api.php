@@ -1,5 +1,6 @@
 <?php
 
+use App\AuthContext\Infrastructure\User\Http\CreateUserTokenController;
 use App\AuthContext\Infrastructure\User\Http\RegisterUserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -12,4 +13,7 @@ Route::get('/aux', function () {
     return response()->json(['message' => 'Hello World!'], 200);
 });
 
+Route::group(['middleware' => 'guest'], function () {
+    Route::post('/createToken', [CreateUserTokenController::class, 'createToken']);
+});
 Route::post('/register', [RegisterUserController::class, 'register']);
