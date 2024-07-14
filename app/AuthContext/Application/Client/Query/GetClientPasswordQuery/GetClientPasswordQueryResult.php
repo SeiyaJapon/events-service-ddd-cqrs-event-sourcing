@@ -2,7 +2,7 @@
 
 declare (strict_types=1);
 
-namespace App\AuthContext\Application\User\Query\GetClientPasswordQuery;
+namespace App\AuthContext\Application\Client\Query\GetClientPasswordQuery;
 
 use App\AuthContext\Application\Query\QueryResultInterface;
 

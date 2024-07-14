@@ -13,8 +13,8 @@ return [
             App\AuthContext\Application\User\Query\GeneratePasswordGrantClientAccessTokenQuery\GeneratePasswordGrantClientAccessTokenQueryHandler::class,
         \App\AuthContext\Application\User\Query\FindUserByEmailAndPasswordQuery\FindUserByEmailAndPasswordQuery::class =>
             \App\AuthContext\Application\User\Query\FindUserByEmailAndPasswordQuery\FindUserByEmailAndPasswordQueryHandler::class,
-        \App\AuthContext\Application\User\Query\GetClientPasswordQuery\GetClientPasswordQuery::class =>
-            \App\AuthContext\Application\User\Query\GetClientPasswordQuery\GetClientPasswordQueryHandler::class,
+        \App\AuthContext\Application\Client\Query\GetClientPasswordQuery\GetClientPasswordQuery::class =>
+            \App\AuthContext\Application\Client\Query\GetClientPasswordQuery\GetClientPasswordQueryHandler::class,
         \App\AuthContext\Application\User\Query\FindUserByIdQuery\FindByIdQuery::class =>
             \App\AuthContext\Application\User\Query\FindUserByIdQuery\FindByIdQueryHandler::class,
     ],

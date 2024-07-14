@@ -4,11 +4,10 @@ declare (strict_types=1);
 
 namespace App\AuthContext\Infrastructure\User\Http;
 
-use App\AuthContext\Application\User\Query\GetClientPasswordQuery\GetClientPasswordQuery;
+use App\AuthContext\Application\Client\Query\GetClientPasswordQuery\GetClientPasswordQuery;
 use App\AuthContext\Application\User\Service\CreateGrantPasswordTokenService;
-use App\AuthContext\Domain\Client\ClientInterface;
-use App\AuthContext\Infrastructure\CommandBus\CommandBusInterface;
 use App\AuthContext\Infrastructure\QueryBus\QueryBusInterface;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
@@ -25,7 +24,7 @@ class CreateUserTokenController
         $this->createGrantPasswordTokenService = $createGrantPasswordTokenService;
     }
 
-    public function createToken(Request $request)
+    public function createToken(Request $request): JsonResponse
     {
         $clientQuery = $this->queryBus->ask(new GetClientPasswordQuery());
         $client = $clientQuery->result()['client'];
@@ -37,6 +36,6 @@ class CreateUserTokenController
             $request->password
         );
 
-        return response()->json($response, Response::HTTP_OK);
+        return new JsonResponse($response, Response::HTTP_OK);
     }
 }

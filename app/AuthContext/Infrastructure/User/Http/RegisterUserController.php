@@ -38,6 +38,6 @@ class RegisterUserController
             new FindUserByEmailAndPasswordQuery($request->email, $request->password)
         );
 
-        return response()->json($user->result(), 201);
+        return new JsonResponse($user->result(), 201);
     }
 }
