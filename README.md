@@ -2,7 +2,7 @@
 
 ## Description
 
-This project is developed with a focus on Domain-Driven Design (DDD) and Command Query Responsibility Segregation (CQRS) principles, ensuring a robust and scalable architecture. It utilizes a combination of technologies including PHP, Composer, JavaScript, SQL, NPM, and Python. The backend is powered by Laravel, with a custom-built CQRS system on top of the League/Tactician package for handling business operations efficiently.
+This project is developed with a focus on Domain-Driven Design (DDD) and Command Query Responsibility Segregation (CQRS) principles, ensuring a robust and scalable architecture. It utilizes a combination of technologies including PHP, Composer, SQL. The backend is powered by Laravel, with a custom-built CQRS system on top of the League/Tactician package for handling business operations efficiently.
 
 ## Getting Started
 
