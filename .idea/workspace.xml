@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1895b317-c777-434a-8125-0a856b8ded4f" name="Changes" comment="" />
+    <list default="true" id="1895b317-c777-434a-8125-0a856b8ded4f" name="Changes" comment="update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/AuthContext/Application/User/Query/GetClientPasswordQuery/GetClientPasswordQuery.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AuthContext/Application/Client/Query/GetClientPasswordQuery/GetClientPasswordQuery.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/AuthContext/Application/User/Query/GetClientPasswordQuery/GetClientPasswordQueryHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AuthContext/Application/Client/Query/GetClientPasswordQuery/GetClientPasswordQueryHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/AuthContext/Application/User/Query/GetClientPasswordQuery/GetClientPasswordQueryResult.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AuthContext/Application/Client/Query/GetClientPasswordQuery/GetClientPasswordQueryResult.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/AuthContext/Domain/User/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AuthContext/Domain/User/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/AuthContext/Infrastructure/User/Http/CreateUserTokenController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AuthContext/Infrastructure/User/Http/CreateUserTokenController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/AuthContext/Infrastructure/User/Http/RegisterUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AuthContext/Infrastructure/User/Http/RegisterUserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/AuthContext/Infrastructure/User/Http/UpdateUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AuthContext/Infrastructure/User/Http/UpdateUserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/cqrs.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/cqrs.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +25,15 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
-  <component name="PhpDebugGeneral" ignore_connections_through_unregistered_servers="false">
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="login" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpDebugGeneral" ignore_connections_through_unregistered_servers="false" listening_started="true">
     <xdebug_debug_ports port="9003" />
     <xdebug_debug_ports port="9000" />
     <xdebug_debug_ports port="9001" />
@@ -98,7 +117,6 @@
       <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
       <path value="$PROJECT_DIR$/vendor/defuse/php-encryption" />
-      <path value="$PROJECT_DIR$/vendor/league/tactician" />
       <path value="$PROJECT_DIR$/vendor/symfony/mime" />
       <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
       <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
@@ -154,6 +172,7 @@
       <path value="$PROJECT_DIR$/vendor/league/event" />
       <path value="$PROJECT_DIR$/vendor/league/uri" />
       <path value="$PROJECT_DIR$/vendor/laravel/passport" />
+      <path value="$PROJECT_DIR$/vendor/league/tactician" />
     </include_path>
   </component>
   <component name="ProjectColorInfo">{
@@ -178,6 +197,32 @@
     &quot;php.override.implement.member.chooser.php.doc&quot;: &quot;NONE&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.webide.settings.project.settings.php.debug&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+    "PHPUnit.CreateUserTokenControllerTest.executor": "Run",
+    "PHPUnit.CreateUserTokenControllerTest.testCreateTokenIsSuccess.executor": "Run",
+    "PHPUnit.FindByIdQueryTest.executor": "Run",
+    "PHPUnit.FindByIdQueryTest.testHandlerSuccess.executor": "Run",
+    "PHPUnit.FindUserByEmailAndPasswordQueryTest.testHandlerSuccess.executor": "Run",
+    "PHPUnit.GeneratePasswordGrantClientAccessTokenQueryTest.executor": "Run",
+    "PHPUnit.GetClientPasswordQueryTest.executor": "Run",
+    "PHPUnit.RegisterUserCommandHandlerTest.executor": "Run",
+    "PHPUnit.RegisterUserControllerTest.testRegisterIsSuccess.executor": "Run",
+    "PHPUnit.UpdateUserCommandTest.executor": "Run",
+    "PHPUnit.UpdateUserControllerTest.testUpdateIsSuccess.executor": "Run",
+    "PHPUnit.UserNotFoundExceptionTest.executor": "Run",
+    "PHPUnit.UserTokenNotFoundExceptionTest.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "credentialsType com.jetbrains.php.remote.interpreter.ui.PhpCreateRemoteSdkForm": "Docker Compose",
+    "credentialsType com.jetbrains.php.remote.interpreter.ui.PhpInplaceEditRemoteSdkForm": "Docker",
+    "git-widget-placeholder": "update",
+    "last_opened_file_path": "/Users/seiya/Sites/freshSky/auth-service/app/AuthContext/Domain",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "php.override.implement.member.chooser.php.doc": "NONE",
+    "settings.editor.selected.configurable": "reference.webide.settings.project.settings.php",
+    "vue.rearranger.settings.migration": "true"
   },
   &quot;keyToStringList&quot;: {
     &quot;DatabaseDriversLRU&quot;: [
@@ -188,13 +233,25 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/AuthContext/Domain" />
+      <recent name="$PROJECT_DIR$/app/AuthContext/Infrastructure/QueryBus" />
+      <recent name="$PROJECT_DIR$/app/AuthContext/Infrastructure/CommandBus" />
+      <recent name="$PROJECT_DIR$/app/AuthContext/Infrastructure" />
       <recent name="$PROJECT_DIR$/app/AuthContext/Domain/ValueObjects" />
-      <recent name="$PROJECT_DIR$/docker" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/docker/php" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/AuthContext/Domain" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="PHPUnit.UpdateUserControllerTest.testUpdateIsSuccess">
+    <configuration name="CreateUserTokenControllerTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\AuthContext\Infrastructure\User\Http\CreateUserTokenControllerTest" configuration_file="/var/www/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/AuthContext/Infrastructure/User/Http/CreateUserTokenControllerTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="CreateUserTokenControllerTest.testCreateTokenIsSuccess" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\AuthContext\Infrastructure\User\Http\CreateUserTokenControllerTest" configuration_file="/var/www/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/AuthContext/Infrastructure/User/Http/CreateUserTokenControllerTest.php" method="testCreateTokenIsSuccess" scope="Method" />
+      <method v="2" />
+    </configuration>
     <configuration name="Main" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <CommandLine>
         <PhpTestInterpreterSettings>
@@ -204,6 +261,27 @@
       <TestRunner configuration_file="$PROJECT_DIR$/phpunit.xml" scope="XML" use_alternative_configuration_file="true" />
       <method v="2" />
     </configuration>
+    <configuration name="RegisterUserControllerTest.testRegisterIsSuccess" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\AuthContext\Infrastructure\User\Http\RegisterUserControllerTest" configuration_file="/var/www/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/AuthContext/Infrastructure/User/Http/RegisterUserControllerTest.php" method="testRegisterIsSuccess" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="UpdateUserControllerTest.testUpdateIsSuccess" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\AuthContext\Infrastructure\User\Http\UpdateUserControllerTest" configuration_file="/var/www/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/AuthContext/Infrastructure/User/Http/UpdateUserControllerTest.php" method="testUpdateIsSuccess" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tests" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner configuration_file="/var/www/phpunit.xml" directory="$PROJECT_DIR$/tests" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHPUnit.UpdateUserControllerTest.testUpdateIsSuccess" />
+        <item itemvalue="PHPUnit.tests" />
+        <item itemvalue="PHPUnit.RegisterUserControllerTest.testRegisterIsSuccess" />
+        <item itemvalue="PHPUnit.CreateUserTokenControllerTest.testCreateTokenIsSuccess" />
+        <item itemvalue="PHPUnit.CreateUserTokenControllerTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -243,8 +321,11 @@
         <option value="php-symfony_mime-37cbfb0ca1b6-f06c5301" />
         <option value="php-symfony_process-37cbfb0ca1b6-0c45b194" />
         <option value="php-symfony_process-37cbfb0ca1b6-3c743ae3" />
+        <option value="php-symfony_property_access-37cbfb0ca1b6-10c893ff" />
+        <option value="php-symfony_property_info-37cbfb0ca1b6-dd1584a5" />
         <option value="php-symfony_routing-37cbfb0ca1b6-2eb007bc" />
         <option value="php-symfony_routing-37cbfb0ca1b6-85de77df" />
+        <option value="php-symfony_serializer-37cbfb0ca1b6-d56cfc98" />
         <option value="php-symfony_string-37cbfb0ca1b6-6da9c235" />
         <option value="php-symfony_translation-37cbfb0ca1b6-3c853d79" />
         <option value="php-symfony_translation-37cbfb0ca1b6-f19b930d" />
@@ -270,11 +351,154 @@
       <workItem from="1719570424345" duration="53000" />
       <workItem from="1719601044406" duration="49539000" />
       <workItem from="1719827729569" duration="59000" />
-      <workItem from="1719850334513" duration="1143000" />
+      <workItem from="1719850334513" duration="9073000" />
+      <workItem from="1720032729183" duration="3172000" />
+      <workItem from="1720111627843" duration="6546000" />
+      <workItem from="1720119512093" duration="12457000" />
+      <workItem from="1720375085220" duration="14058000" />
+      <workItem from="1720428654059" duration="12000" />
+      <workItem from="1720452835551" duration="9427000" />
+      <workItem from="1720547070386" duration="4860000" />
+      <workItem from="1720724443688" duration="4865000" />
+      <workItem from="1720776717727" duration="20877000" />
     </task>
+    <task id="LOCAL-00001" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1719851855152</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1719851855152</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Register User: VO, entities, commands, queries, repositories, controller">
+      <option name="closed" value="true" />
+      <created>1719855409623</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1719855409623</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Register User: VO, entities, commands, queries, repositories, controller">
+      <option name="closed" value="true" />
+      <created>1719855428015</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1719855428015</updated>
+    </task>
+    <task id="LOCAL-00004" summary="creating CQRS">
+      <option name="closed" value="true" />
+      <created>1720114290428</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1720114290428</updated>
+    </task>
+    <task id="LOCAL-00005" summary="creating CQRS">
+      <option name="closed" value="true" />
+      <created>1720119006818</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1720119006818</updated>
+    </task>
+    <task id="LOCAL-00006" summary="creating CQRS">
+      <option name="closed" value="true" />
+      <created>1720119606680</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1720119606680</updated>
+    </task>
+    <task id="LOCAL-00007" summary="creating CQRS">
+      <option name="closed" value="true" />
+      <created>1720291397418</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1720291397418</updated>
+    </task>
+    <task id="LOCAL-00008" summary="login">
+      <option name="closed" value="true" />
+      <created>1720377330018</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1720377330019</updated>
+    </task>
+    <task id="LOCAL-00009" summary="login">
+      <option name="closed" value="true" />
+      <created>1720377351044</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1720377351044</updated>
+    </task>
+    <task id="LOCAL-00010" summary="login">
+      <option name="closed" value="true" />
+      <created>1720767553703</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1720767553703</updated>
+    </task>
+    <task id="LOCAL-00011" summary="login">
+      <option name="closed" value="true" />
+      <created>1720778058055</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1720778058055</updated>
+    </task>
+    <task id="LOCAL-00012" summary="login">
+      <option name="closed" value="true" />
+      <created>1720794844540</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1720794844540</updated>
+    </task>
+    <task id="LOCAL-00013" summary="update">
+      <option name="closed" value="true" />
+      <created>1720812736797</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1720812736797</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit" />
+    <MESSAGE value="Register User: VO, entities, commands, queries, repositories, controller" />
+    <MESSAGE value="creating CQRS" />
+    <MESSAGE value="login" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/AuthContext/Application/User/Query/FindUserByIdQuery/FindByIdQueryHandler.php</url>
+          <line>19</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/AuthContext/Application/User/Query/FindUserByIdQuery/FindByIdQueryResponse.php</url>
+          <line>20</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/AuthContext/Infrastructure/User/Http/CreateUserTokenController.php</url>
+          <line>31</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
