@@ -9,6 +9,7 @@ use App\AuthContext\Application\User\Query\FindUserByIdQuery\FindByIdQuery;
 use App\AuthContext\Domain\User\UserId;
 use App\AuthContext\Infrastructure\CommandBus\CommandBusInterface;
 use App\AuthContext\Infrastructure\QueryBus\QueryBusInterface;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
@@ -23,7 +24,7 @@ class UpdateUserController
         $this->queryBus = $queryBus;
     }
 
-    public function update(Request $request)
+    public function update(Request $request): JsonResponse
     {
         $this->commandBus->handle(
             new UpdateUserCommand(
@@ -38,6 +39,6 @@ class UpdateUserController
             new FindByIdQuery(new UserId($request->input('id')))
         );
 
-        return response()->json($user->result(), Response::HTTP_OK);
+        return new JsonResponse($user->result(), Response::HTTP_OK);
     }
 }

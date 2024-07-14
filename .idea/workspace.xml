@@ -4,13 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1895b317-c777-434a-8125-0a856b8ded4f" name="Changes" comment="">
+    <list default="true" id="1895b317-c777-434a-8125-0a856b8ded4f" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/AuthContext/Domain/User/UserRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AuthContext/Domain/User/UserRepositoryInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/AuthContext/Infrastructure/User/Persistence/Repository/EloquentUserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AuthContext/Infrastructure/User/Persistence/Repository/EloquentUserRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/AuthContext/Application/User/Query/GetClientPasswordQuery/GetClientPasswordQuery.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AuthContext/Application/Client/Query/GetClientPasswordQuery/GetClientPasswordQuery.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/AuthContext/Application/User/Query/GetClientPasswordQuery/GetClientPasswordQueryHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AuthContext/Application/Client/Query/GetClientPasswordQuery/GetClientPasswordQueryHandler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/AuthContext/Application/User/Query/GetClientPasswordQuery/GetClientPasswordQueryResult.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AuthContext/Application/Client/Query/GetClientPasswordQuery/GetClientPasswordQueryResult.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/AuthContext/Domain/User/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AuthContext/Domain/User/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/AuthContext/Infrastructure/User/Http/CreateUserTokenController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AuthContext/Infrastructure/User/Http/CreateUserTokenController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/AuthContext/Infrastructure/User/Http/RegisterUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AuthContext/Infrastructure/User/Http/RegisterUserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/AuthContext/Infrastructure/User/Http/UpdateUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AuthContext/Infrastructure/User/Http/UpdateUserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/cqrs.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/cqrs.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,6 +185,19 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "PHPUnit.CreateUserTokenControllerTest.executor": "Run",
+    "PHPUnit.CreateUserTokenControllerTest.testCreateTokenIsSuccess.executor": "Run",
+    "PHPUnit.FindByIdQueryTest.executor": "Run",
+    "PHPUnit.FindByIdQueryTest.testHandlerSuccess.executor": "Run",
+    "PHPUnit.FindUserByEmailAndPasswordQueryTest.testHandlerSuccess.executor": "Run",
+    "PHPUnit.GeneratePasswordGrantClientAccessTokenQueryTest.executor": "Run",
+    "PHPUnit.GetClientPasswordQueryTest.executor": "Run",
+    "PHPUnit.RegisterUserCommandHandlerTest.executor": "Run",
+    "PHPUnit.RegisterUserControllerTest.testRegisterIsSuccess.executor": "Run",
+    "PHPUnit.UpdateUserCommandTest.executor": "Run",
+    "PHPUnit.UpdateUserControllerTest.testUpdateIsSuccess.executor": "Run",
+    "PHPUnit.UserNotFoundExceptionTest.executor": "Run",
+    "PHPUnit.UserTokenNotFoundExceptionTest.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "credentialsType com.jetbrains.php.remote.interpreter.ui.PhpCreateRemoteSdkForm": "Docker Compose",
     "credentialsType com.jetbrains.php.remote.interpreter.ui.PhpInplaceEditRemoteSdkForm": "Docker",
@@ -214,7 +231,15 @@
       <recent name="$PROJECT_DIR$/app/AuthContext/Domain" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="PHPUnit.UpdateUserControllerTest.testUpdateIsSuccess">
+    <configuration name="CreateUserTokenControllerTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\AuthContext\Infrastructure\User\Http\CreateUserTokenControllerTest" configuration_file="/var/www/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/AuthContext/Infrastructure/User/Http/CreateUserTokenControllerTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="CreateUserTokenControllerTest.testCreateTokenIsSuccess" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\AuthContext\Infrastructure\User\Http\CreateUserTokenControllerTest" configuration_file="/var/www/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/AuthContext/Infrastructure/User/Http/CreateUserTokenControllerTest.php" method="testCreateTokenIsSuccess" scope="Method" />
+      <method v="2" />
+    </configuration>
     <configuration name="Main" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <CommandLine>
         <PhpTestInterpreterSettings>
@@ -224,6 +249,27 @@
       <TestRunner configuration_file="$PROJECT_DIR$/phpunit.xml" scope="XML" use_alternative_configuration_file="true" />
       <method v="2" />
     </configuration>
+    <configuration name="RegisterUserControllerTest.testRegisterIsSuccess" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\AuthContext\Infrastructure\User\Http\RegisterUserControllerTest" configuration_file="/var/www/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/AuthContext/Infrastructure/User/Http/RegisterUserControllerTest.php" method="testRegisterIsSuccess" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="UpdateUserControllerTest.testUpdateIsSuccess" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Unit\AuthContext\Infrastructure\User\Http\UpdateUserControllerTest" configuration_file="/var/www/phpunit.xml" file="$PROJECT_DIR$/tests/Unit/AuthContext/Infrastructure/User/Http/UpdateUserControllerTest.php" method="testUpdateIsSuccess" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tests" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner configuration_file="/var/www/phpunit.xml" directory="$PROJECT_DIR$/tests" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHPUnit.UpdateUserControllerTest.testUpdateIsSuccess" />
+        <item itemvalue="PHPUnit.tests" />
+        <item itemvalue="PHPUnit.RegisterUserControllerTest.testRegisterIsSuccess" />
+        <item itemvalue="PHPUnit.CreateUserTokenControllerTest.testCreateTokenIsSuccess" />
+        <item itemvalue="PHPUnit.CreateUserTokenControllerTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -302,7 +348,7 @@
       <workItem from="1720452835551" duration="9427000" />
       <workItem from="1720547070386" duration="4860000" />
       <workItem from="1720724443688" duration="4865000" />
-      <workItem from="1720776717727" duration="13135000" />
+      <workItem from="1720776717727" duration="20877000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -400,7 +446,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720794844540</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="update">
+      <option name="closed" value="true" />
+      <created>1720812736797</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1720812736797</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -411,6 +465,28 @@
     <MESSAGE value="Register User: VO, entities, commands, queries, repositories, controller" />
     <MESSAGE value="creating CQRS" />
     <MESSAGE value="login" />
-    <option name="LAST_COMMIT_MESSAGE" value="login" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/AuthContext/Application/User/Query/FindUserByIdQuery/FindByIdQueryHandler.php</url>
+          <line>19</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/AuthContext/Application/User/Query/FindUserByIdQuery/FindByIdQueryResponse.php</url>
+          <line>20</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/AuthContext/Infrastructure/User/Http/CreateUserTokenController.php</url>
+          <line>31</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
