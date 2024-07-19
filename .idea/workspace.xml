@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1895b317-c777-434a-8125-0a856b8ded4f" name="Changes" comment="update">
+    <list default="true" id="1895b317-c777-434a-8125-0a856b8ded4f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/AuthContext/Application/User/Query/GetClientPasswordQuery/GetClientPasswordQuery.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AuthContext/Application/Client/Query/GetClientPasswordQuery/GetClientPasswordQuery.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/AuthContext/Application/User/Query/GetClientPasswordQuery/GetClientPasswordQueryHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AuthContext/Application/Client/Query/GetClientPasswordQuery/GetClientPasswordQueryHandler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/AuthContext/Application/User/Query/GetClientPasswordQuery/GetClientPasswordQueryResult.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AuthContext/Application/Client/Query/GetClientPasswordQuery/GetClientPasswordQueryResult.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/AuthContext/Domain/User/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AuthContext/Domain/User/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/AuthContext/Infrastructure/User/Http/CreateUserTokenController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AuthContext/Infrastructure/User/Http/CreateUserTokenController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/AuthContext/Infrastructure/User/Http/RegisterUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AuthContext/Infrastructure/User/Http/RegisterUserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/AuthContext/Infrastructure/User/Http/UpdateUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AuthContext/Infrastructure/User/Http/UpdateUserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/cqrs.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/cqrs.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,14 +18,9 @@
     <execution />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="login" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpDebugGeneral" ignore_connections_through_unregistered_servers="false" listening_started="true">
+  <component name="PhpDebugGeneral" ignore_connections_through_unregistered_servers="false">
     <xdebug_debug_ports port="9003" />
     <xdebug_debug_ports port="9000" />
     <xdebug_debug_ports port="9001" />
@@ -188,6 +175,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;credentialsType com.jetbrains.php.remote.interpreter.ui.PhpCreateRemoteSdkForm&quot;: &quot;Docker&quot;,
     &quot;credentialsType com.jetbrains.php.remote.interpreter.ui.PhpInplaceEditRemoteSdkForm&quot;: &quot;Docker&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/seiya/Sites/freshSky/auth-service/app/AuthContext/Domain/ValueObjects&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -197,32 +185,6 @@
     &quot;php.override.implement.member.chooser.php.doc&quot;: &quot;NONE&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.webide.settings.project.settings.php.debug&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-    "PHPUnit.CreateUserTokenControllerTest.executor": "Run",
-    "PHPUnit.CreateUserTokenControllerTest.testCreateTokenIsSuccess.executor": "Run",
-    "PHPUnit.FindByIdQueryTest.executor": "Run",
-    "PHPUnit.FindByIdQueryTest.testHandlerSuccess.executor": "Run",
-    "PHPUnit.FindUserByEmailAndPasswordQueryTest.testHandlerSuccess.executor": "Run",
-    "PHPUnit.GeneratePasswordGrantClientAccessTokenQueryTest.executor": "Run",
-    "PHPUnit.GetClientPasswordQueryTest.executor": "Run",
-    "PHPUnit.RegisterUserCommandHandlerTest.executor": "Run",
-    "PHPUnit.RegisterUserControllerTest.testRegisterIsSuccess.executor": "Run",
-    "PHPUnit.UpdateUserCommandTest.executor": "Run",
-    "PHPUnit.UpdateUserControllerTest.testUpdateIsSuccess.executor": "Run",
-    "PHPUnit.UserNotFoundExceptionTest.executor": "Run",
-    "PHPUnit.UserTokenNotFoundExceptionTest.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "credentialsType com.jetbrains.php.remote.interpreter.ui.PhpCreateRemoteSdkForm": "Docker Compose",
-    "credentialsType com.jetbrains.php.remote.interpreter.ui.PhpInplaceEditRemoteSdkForm": "Docker",
-    "git-widget-placeholder": "update",
-    "last_opened_file_path": "/Users/seiya/Sites/freshSky/auth-service/app/AuthContext/Domain",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "php.override.implement.member.chooser.php.doc": "NONE",
-    "settings.editor.selected.configurable": "reference.webide.settings.project.settings.php",
-    "vue.rearranger.settings.migration": "true"
   },
   &quot;keyToStringList&quot;: {
     &quot;DatabaseDriversLRU&quot;: [
@@ -321,11 +283,8 @@
         <option value="php-symfony_mime-37cbfb0ca1b6-f06c5301" />
         <option value="php-symfony_process-37cbfb0ca1b6-0c45b194" />
         <option value="php-symfony_process-37cbfb0ca1b6-3c743ae3" />
-        <option value="php-symfony_property_access-37cbfb0ca1b6-10c893ff" />
-        <option value="php-symfony_property_info-37cbfb0ca1b6-dd1584a5" />
         <option value="php-symfony_routing-37cbfb0ca1b6-2eb007bc" />
         <option value="php-symfony_routing-37cbfb0ca1b6-85de77df" />
-        <option value="php-symfony_serializer-37cbfb0ca1b6-d56cfc98" />
         <option value="php-symfony_string-37cbfb0ca1b6-6da9c235" />
         <option value="php-symfony_translation-37cbfb0ca1b6-3c853d79" />
         <option value="php-symfony_translation-37cbfb0ca1b6-f19b930d" />
@@ -361,6 +320,7 @@
       <workItem from="1720547070386" duration="4860000" />
       <workItem from="1720724443688" duration="4865000" />
       <workItem from="1720776717727" duration="20877000" />
+      <workItem from="1721400428655" duration="155000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
