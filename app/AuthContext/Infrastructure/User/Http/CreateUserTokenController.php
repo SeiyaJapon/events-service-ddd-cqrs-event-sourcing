@@ -36,6 +36,10 @@ class CreateUserTokenController
             $request->password
         );
 
+        if (isset($response['error'])) {
+            return new JsonResponse($response, Response::HTTP_UNAUTHORIZED);
+        }
+
         return new JsonResponse($response, Response::HTTP_OK);
     }
 }
