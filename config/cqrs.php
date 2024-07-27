@@ -2,20 +2,15 @@
 
 return [
     'commands' => [
-        App\AuthContext\Application\User\Command\RegisterUserCommand\RegisterUserCommand::class =>
-            App\AuthContext\Application\User\Command\RegisterUserCommand\RegisterUserCommandHandler::class,
-        App\AuthContext\Application\User\Command\UpdateUserCommand\UpdateUserCommand::class =>
-            App\AuthContext\Application\User\Command\UpdateUserCommand\UpdateUserCommandHandler::class,
-
+        App\EventContext\Application\Event\Commands\ImportEvents\ImportEventsCommand::class =>
+            App\EventContext\Application\Event\Commands\ImportEvents\ImportEventsCommandHandler::class,
+        App\EventContext\Application\Event\Commands\SaveEventCommand\SaveEventCommand::class =>
+            App\EventContext\Application\Event\Commands\SaveEventCommand\SaveEventCommandHandler::class,
+        App\EventContext\Application\Event\Commands\SaveZoneCommand\SaveZoneCommand::class =>
+            App\EventContext\Application\Event\Commands\SaveZoneCommand\SaveZoneCommandHandler::class,
     ],
     'queries' => [
-        App\AuthContext\Application\User\Query\GeneratePasswordGrantClientAccessTokenQuery\GeneratePasswordGrantClientAccessTokenQuery::class =>
-            App\AuthContext\Application\User\Query\GeneratePasswordGrantClientAccessTokenQuery\GeneratePasswordGrantClientAccessTokenQueryHandler::class,
-        \App\AuthContext\Application\User\Query\FindUserByEmailAndPasswordQuery\FindUserByEmailAndPasswordQuery::class =>
-            \App\AuthContext\Application\User\Query\FindUserByEmailAndPasswordQuery\FindUserByEmailAndPasswordQueryHandler::class,
-        \App\AuthContext\Application\Client\Query\GetClientPasswordQuery\GetClientPasswordQuery::class =>
-            \App\AuthContext\Application\Client\Query\GetClientPasswordQuery\GetClientPasswordQueryHandler::class,
-        \App\AuthContext\Application\User\Query\FindUserByIdQuery\FindByIdQuery::class =>
-            \App\AuthContext\Application\User\Query\FindUserByIdQuery\FindByIdQueryHandler::class,
+        App\EventContext\Application\Event\Queries\FindByDatesQuery\FindByDatesQuery::class =>
+            App\EventContext\Application\Event\Queries\FindByDatesQuery\FindByDatesQueryHandler::class
     ],
 ];

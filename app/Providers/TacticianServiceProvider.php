@@ -4,11 +4,13 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
-use App\AuthContext\Infrastructure\CommandBus\TacticianCommandBus;
+use App\EventContext\Infrastructure\CommandBus\TacticianCommandBus;
+use App\EventContext\Infrastructure\Event\Services\EventDispatcherService;
+use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Support\ServiceProvider;
-use App\AuthContext\Infrastructure\QueryBus\TacticianQueryBus;
-use App\AuthContext\Infrastructure\CommandBus\CommandBusInterface;
-use App\AuthContext\Infrastructure\QueryBus\QueryBusInterface;
+use App\EventContext\Infrastructure\QueryBus\TacticianQueryBus;
+use App\EventContext\Infrastructure\CommandBus\CommandBusInterface;
+use App\EventContext\Infrastructure\QueryBus\QueryBusInterface;
 use League\Tactician\CommandBus;
 use League\Tactician\Handler\CommandHandlerMiddleware;
 use League\Tactician\Handler\CommandNameExtractor\ClassNameExtractor;
@@ -57,6 +59,10 @@ class TacticianServiceProvider extends ServiceProvider
             ]);
 
             return new TacticianQueryBus($queryBus);
+        });
+
+        $this->app->singleton(EventDispatcherService::class, function ($app) {
+            return new EventDispatcherService($app->make(Dispatcher::class));
         });
     }
 }

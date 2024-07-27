@@ -158,12 +158,12 @@ return [
          * Application Service Providers...
          */
         App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
 
         /*
          * Your custom service provider
          */
-        \App\Providers\TacticianServiceProvider::class,
+        App\Providers\EventServiceProvider::class,
+        App\Providers\TacticianServiceProvider::class,
     ],
 
 ];

@@ -2,11 +2,12 @@
 
 namespace App\Providers;
 
-use App\AuthContext\Domain\Client\ClientInterface;
-use App\AuthContext\Domain\User\UserRepositoryInterface;
-use App\AuthContext\Infrastructure\Client\Persistence\Repository\ClientPassport;
-use App\AuthContext\Infrastructure\User\Persistence\Repository\EloquentUserRepository;
-use Illuminate\Filesystem\Filesystem;
+use App\EventContext\Domain\Event\Repositories\EventRepositoryInterface;
+use App\EventContext\Domain\Event\Repositories\ThirdPartyEventRepositoryInterface;
+use App\EventContext\Domain\Event\Repositories\ZoneRepositoryInterface;
+use App\EventContext\Infrastructure\Event\Persistence\Repository\DataThirdPartyEventRepository;
+use App\EventContext\Infrastructure\Event\Persistence\Repository\EloquentEventRepository;
+use App\EventContext\Infrastructure\Event\Persistence\Repository\EloquentZoneRepository;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -16,11 +17,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        $this->app->singleton('files', function () {
-            return new Filesystem();
-        });
-        $this->app->bind(UserRepositoryInterface::class, EloquentUserRepository::class);
-        $this->app->bind(ClientInterface::class, ClientPassport::class);
+        $this->app->bind(EventRepositoryInterface::class, EloquentEventRepository::class);
+        $this->app->bind(ZoneRepositoryInterface::class, EloquentZoneRepository::class);
+        $this->app->bind(ThirdPartyEventRepositoryInterface::class, DataThirdPartyEventRepository::class);
     }
 
     /**

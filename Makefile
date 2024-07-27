@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOCKER_BE = freshsky-be
+DOCKER_BE = events-be
 OS := $(shell uname)
 
 ifeq ($(OS),Darwin)
@@ -26,7 +26,7 @@ up: ## Start the docker environment
 	U_ID=${UID} docker-compose up -d --remove-orphans
 
 run: ## Start the containers
-	docker network create freshssky-network || true
+	docker network create events-network || true
 	U_ID=${UID} docker-compose up -d
 
 stop: ## Stop the containers
@@ -42,7 +42,7 @@ prepare: ## Runs backend commands
 	$(MAKE) composer-install
 
 create-network:
-	docker network create freshsky-network || true
+	docker network create events-network || true
 
 down: ## composer down
 	docker compose down --remove-orphans
@@ -74,6 +74,9 @@ create-project: ## create project
 	docker compose exec $(DOCKER_BE) php artisan storage:link
 	docker compose exec $(DOCKER_BE) chmod -R 777 storage bootstrap/cache
 	@make fresh
+
+events-queue:
+	docker compose exec $(DOCKER_BE) php artisan queue:work
 
 dumpauto:
 	docker compose exec $(DOCKER_BE) composer dumpautoload

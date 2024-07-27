@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1895b317-c777-434a-8125-0a856b8ded4f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/AuthContext/Infrastructure/User/Http/CreateUserTokenController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/AuthContext/Infrastructure/User/Http/CreateUserTokenController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,9 +17,14 @@
     <execution />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="login" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpDebugGeneral" ignore_connections_through_unregistered_servers="false">
+  <component name="PhpDebugGeneral" ignore_connections_through_unregistered_servers="false" listening_started="true">
     <xdebug_debug_ports port="9003" />
     <xdebug_debug_ports port="9000" />
     <xdebug_debug_ports port="9001" />
@@ -320,7 +324,7 @@
       <workItem from="1720547070386" duration="4860000" />
       <workItem from="1720724443688" duration="4865000" />
       <workItem from="1720776717727" duration="20877000" />
-      <workItem from="1721400428655" duration="155000" />
+      <workItem from="1721405725325" duration="8000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -426,11 +430,30 @@
       <option name="project" value="LOCAL" />
       <updated>1720812736797</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="fix">
+      <option name="closed" value="true" />
+      <created>1721400888476</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1721400888476</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
@@ -438,7 +461,8 @@
     <MESSAGE value="creating CQRS" />
     <MESSAGE value="login" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

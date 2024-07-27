@@ -1,24 +1,12 @@
 <?php
 
-use App\AuthContext\Infrastructure\User\Http\CreateUserTokenController;
-use App\AuthContext\Infrastructure\User\Http\RegisterUserController;
-use App\AuthContext\Infrastructure\User\Http\UpdateUserController;
-use Illuminate\Http\Request;
+use App\EventContext\Infrastructure\Event\Http\FindEventsByDateController;
+use App\EventContext\Infrastructure\Event\Http\ImportEventsController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/user', function (Request $request) {
-    return $request->user();
-})->middleware('auth:api');
 
-Route::get('/aux', function () {
-    return response()->json(['message' => 'Hello World!'], 200);
+Route::get('aux', function () {
+    return response()->json(['message' => 'Hello World!']);
 });
-
-Route::group(['middleware' => 'guest'], function () {
-    Route::post('/createToken', [CreateUserTokenController::class, 'createToken']);
-    Route::post('/register', [RegisterUserController::class, 'register']);
-});
-
-Route::group(['middleware' => 'auth:api'], function () {
-    Route::put('/update', [UpdateUserController::class, 'update']);
-});
+Route::get('events', [FindEventsByDateController::class, 'findEventsByDate']);
+Route::post('events/import', [ImportEventsController::class, 'importEvents']);

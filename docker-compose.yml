@@ -1,29 +1,29 @@
 version: '3.7'
 
 services:
-  freshsky-web:
-    container_name: freshsky-web
+  events-web:
+    container_name: events-web
     build:
       context: ./docker/nginx
       args:
-        user: freshsky
+        user: events
         UID: 501
     ports:
       - 350:80
     volumes:
       - ./:/var/www
     depends_on:
-      - freshsky-be
-      - freshsky-db
+      - events-be
+      - events-db
     networks:
-      - freshsky-network
+      - events-network
 
-  freshsky-be:
-    container_name: freshsky-be
+  events-be:
+    container_name: events-be
     build:
       context: ./docker/php
       args:
-        user: freshsky
+        user: events
         UID: 501
     environment:
       PHP_IDE_CONFIG: serverName=Docker
@@ -32,14 +32,14 @@ services:
     volumes:
       - ./:/var/www
       - ./docker/php/xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini
-      - ~/.ssh/id_rsa:/home/appuser/.ssh/freshsky
+      - ~/.ssh/id_rsa:/home/appuser/.ssh/events
     networks:
-      - freshsky-network
+      - events-network
     depends_on:
-      - freshsky-db
+      - events-db
 
-  freshsky-db:
-    container_name: freshsky-db
+  events-db:
+    container_name: events-db
     image: mariadb:latest
     ports:
       - 3306:3306
@@ -47,10 +47,10 @@ services:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_PASSWORD=123123
       - MYSQL_USER=user
-      - MYSQL_DATABASE=AuthDb
+      - MYSQL_DATABASE=EventsDb
     networks:
-      - freshsky-network
+      - events-network
 
 networks:
-  freshsky-network:
+  events-network:
     external: true
