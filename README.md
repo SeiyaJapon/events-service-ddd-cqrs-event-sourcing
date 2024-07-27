@@ -1,37 +1,136 @@
-# Auth Service (DDD + CQRS)
+# Events Service
 
 ## Description
 
-This project is developed with a focus on Domain-Driven Design (DDD) and Command Query Responsibility Segregation (CQRS) principles, ensuring a robust and scalable architecture. It utilizes a combination of technologies including PHP, Composer, SQL. The backend is powered by Laravel, with a custom-built CQRS system on top of the League/Tactician package for handling business operations efficiently.
+This project involves developing a microservice that integrates events from an external provider into a marketplace. The objective is to create an API that adheres to the provided Open API specification, is resource and time-efficient, and maintains high performance even under heavy load.
 
-## Getting Started
+## Project Structure
 
-### Dependencies
+The project is structured following the principles of Domain-Driven Design (DDD), Command Query Responsibility Segregation (CQRS), and event sourcing. This ensures a scalable, maintainable, and easily evolvable solution.
 
-- Docker
-- PHP 8.2 or higher
-- Composer for managing PHP dependencies
-- NPM for managing JavaScript packages
-- Python 3.8 or higher
-- Laravel Framework
-- MySQL or a compatible SQL database for data storage
-- League/Tactician for the CQRS command bus
+### Domain-Driven Design (DDD)
 
-### Installation and Setup
+DDD helps us maintain a clear and organized structure in our code, separating responsibilities and ensuring that each part of the system focuses on its own business logic.
 
-1. **Clone the repository** to your local machine.
-2. **Navigate to the project directory** and use the provided `Makefile` commands to simplify the setup process.
+- **Domain**: Contains entities, aggregates, value objects, and domain services.
+- **Application**: Contains use cases and commands/queries that interact with the domain.
+- **Infrastructure**: Contains the implementation of repositories, external services, and any other technical details.
 
-### Makefile Commands
+### Command Query Responsibility Segregation (CQRS)
 
-The `Makefile` includes several commands to help with project setup and development:
+CQRS allows us to separate read and write operations, improving the scalability and performance of the system.
 
-- `make build`: First run / installation will call this target, setting up the Docker environment and starting the services.
-- `make up`: Starts the Docker environment.
-- `make stop`: Stops the Docker containers.
-- `make restart`: Restarts the Docker containers.
-- `make prepare`: Prepares the backend environment, including dependency installation.
-- `make install-components`: Runs Laravel migrations, installs Passport for OAuth, and seeds the database.
-- `make fresh`: Resets the database and seeds it with initial data.
-- `make clear-all`: Clears and caches configurations and routes.
-- `make enter`: Accesses the backend container for direct command execution.
+- **Commands**: Used for write operations and modifying the state.
+- **Queries**: Used for read operations and querying the state.
+
+### Events and Queues
+The use of events and queues allows for asynchronous processing and better handling of high volumes of operations. This improves the system's scalability and resilience.
+
+- Events: Captured and processed to trigger actions within the system.
+- Queues: Used to manage and process events asynchronously, reducing load and improving response times.
+
+## Integration with the External Provider
+
+The external provider offers an endpoint that returns a list of events in XML format. Our task was to develop a microservice that fetches these events, normalizes the data, and exposes an endpoint following the provided Open API specification.
+
+### Key Features
+
+- **Fetching and Caching Events**: We fetch events from the external provider and cache them to improve performance and ensure availability even if the external service is down.
+- **Filtering by Date Range**: The exposed endpoint allows filtering events by a specified date range.
+- **Efficient Data Handling**: The service is designed to handle large volumes of events efficiently.
+
+## Scalability and Performance
+
+To ensure scalability and performance, the following considerations have been made:
+
+- **Domain-Driven Design (DDD) and CQRS**: These patterns help in organizing the codebase, making it easier to scale and maintain.
+- **Event Sourcing**: Provides a reliable way to store and reconstruct events, ensuring data integrity and facilitating auditing.
+- **Caching**: Events are cached to reduce load on the external provider and improve response times.
+- **Testing**: Comprehensive unit tests and integration tests ensure the reliability of the system.
+
+## Running the Application
+
+A `Makefile` is included to simplify running the application.
+
+### Prerequisites
+
+- PHP 7.4 or higher
+- Composer
+- Laravel
+
+# Makefile Commands for Installation and Working with the Container and Project
+
+## Installation
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/SeiyaJapon/events-service-ddd-cqrs-event-sourcing.git
+   cd events-service-ddd-cqrs-event-sourcing
+    ```
+2. **Install dependencies:**
+
+## Working with the Container and Project
+
+**Build the Docker container:** 
+   ```sh
+   make build
+   ```
+**Run the Docker container:** 
+   ```sh
+   make run
+   ```
+**Stop the Docker container:** 
+   ```sh
+   make stop
+   ```
+**Restart the Docker container:** 
+   ```sh
+   make restart
+   ```
+**Rebuild all Docker containers:** 
+   ```sh
+   make rebuild-all
+   ```
+**Remove the Docker container:** 
+   ```sh
+   make down
+   ```
+**Destroy the Docker container:** 
+   ```sh
+   make destroy
+   ```
+**Install Laravel components:** 
+   ```sh
+   make install-components
+   ```
+**Prepare Laravel:** 
+   ```sh
+   make laravel-prepare
+   ```
+**Create a new Laravel project:** 
+   ```sh
+   make create-project
+   ```
+**Run the Laravel queue:** 
+   ```sh
+   make events-queue
+   ```
+**Dump autoload:** 
+   ```sh
+   make dumpauto
+   ```
+**Run fresh migrations with seed:** 
+   ```sh
+   make fresh
+   ```
+**Clear all caches:** 
+   ```sh
+   make clear-all
+   ```
+**Tail the Symfony dev log:** 
+   ```sh
+   make logs
+   ```
+**Enter the backend container:**
+   ```sh
+   make enter
+   ``` 
